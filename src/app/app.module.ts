@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NarrativeComponent } from './narrative/narrative.component';
+import { CommercialComponent } from './commercial/commercial.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NarrativeComponent } from './narrative/narrative.component';
     DashboardComponent,
     AboutComponent,
     ContactComponent,
-    NarrativeComponent
+    NarrativeComponent,
+    CommercialComponent
   ],
   imports: [
     BrowserModule
