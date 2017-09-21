@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { NarrativeComponent } from './narrative/narrative.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    NarrativeComponent
   ],
   imports: [
     BrowserModule
