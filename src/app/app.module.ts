@@ -13,6 +13,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { VideosComponent } from './videos/videos.component';
 import { PhotosComponent } from './photos/photos.component';
+import { DataService } from './shared/data/data.service';
+import { HttpClientModule
+ } from '@angular/common/http';
+import { LoaderComponent } from './loader/loader.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent, pathMatch: 'full' },
@@ -36,17 +40,19 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     JumbotronComponent,
     VideosComponent,
-    PhotosComponent
+    PhotosComponent,
+    LoaderComponent
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     // other imports here
     BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
