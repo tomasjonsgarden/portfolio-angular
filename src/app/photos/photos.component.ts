@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../shared/data/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-photos',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotosComponent implements OnInit {
 
-  constructor() { }
+  loaded: boolean;
+  photos: object;
 
-  ngOnInit() {
+  constructor(private dataService: DataService, private router: Router) {
+
   }
 
+  ngOnInit() {
+    this.dataService.getPhotos().subscribe((photos) => {
+      this.photos = photos;
+      this.loaded = true;
+    })
+  }
+
+  clickHandler(link){
+    this.router.navigate([{ outlets: { 'popup': ['lightbox', encodeURI(link)] } }]);
+  }
 }
+

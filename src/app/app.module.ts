@@ -14,13 +14,14 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { VideosComponent } from './videos/videos.component';
 import { PhotosComponent } from './photos/photos.component';
 import { DataService } from './shared/data/data.service';
-import { HttpClientModule
- } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
+import { LightboxComponent } from './lightbox/lightbox.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent, pathMatch: 'full' },
   { path: 'commercial', component: CommercialComponent },
+  { path: 'lightbox/:link', component: LightboxComponent, outlet: 'popup' },
   { path: 'narrative', component: NarrativeComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'about', component: AboutComponent },
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     JumbotronComponent,
     VideosComponent,
     PhotosComponent,
-    LoaderComponent
+    LoaderComponent,
+    LightboxComponent
   ],
   imports: [
     RouterModule.forRoot(

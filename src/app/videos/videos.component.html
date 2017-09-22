@@ -1,1 +1,10 @@
 <app-loader linear *ngIf="!loaded"></app-loader>
+<ul>
+    <li *ngFor="let video of videos">
+        <a (click)="clickHandler(video.files[0].link_secure)">
+            {{video.name}}
+            {{video.description}}
+            <img src="{{video.pictures.sizes[2].link}}" alt="">
+        </a>
+    </li>
+</ul>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../shared/data/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-videos',
@@ -12,7 +13,7 @@ export class VideosComponent implements OnInit {
   loaded: boolean;
   videos: object;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private router : Router) {
 
   }
 
@@ -23,4 +24,7 @@ export class VideosComponent implements OnInit {
     })
   }
 
+  clickHandler(link) {
+    this.router.navigate([{ outlets: { 'popup': ['lightbox', encodeURI(link)] } }]);
+  }
 }
