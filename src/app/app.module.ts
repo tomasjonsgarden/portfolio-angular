@@ -19,7 +19,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
 
 const appRoutes: Routes = [
-  { path: '', component: DashboardComponent, pathMatch: 'full' },
+  { path: '', component: DashboardComponent },
   { path: 'commercial', component: CommercialComponent },
   { path: 'lightbox/:link', component: LightboxComponent, outlet: 'popup' },
   { path: 'narrative', component: NarrativeComponent },

@@ -1,0 +1,30 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+    animation: scale 1s backwards;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+
+li:nth-last-of-type(2n) {
+    animation-delay: .2s;
+}
+
+li:nth-last-of-type(2n+2) {
+    animation-delay: .4s;
+}
+
+li:nth-last-of-type(3n) {
+    animation-delay: .6s;
+}
