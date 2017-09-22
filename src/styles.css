@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "/assets/fonts/stylesheet.css";
 :root {
     --accent-color: red;
     --primary-color: white;
@@ -7,6 +8,7 @@
 }
 
 body {
+    font-family: 'open_sansregular';
     color: var(--primary-color);
     background: var(--secondary-color);
 }
