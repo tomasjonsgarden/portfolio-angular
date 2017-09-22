@@ -1,0 +1,4 @@
+<div>
+    <app-loader *ngIf="!loaded" spinner></app-loader>
+    <img src="{{src}}" alt="" (load)="onLoad()">
+</div>

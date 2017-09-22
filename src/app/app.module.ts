@@ -17,6 +17,7 @@ import { DataService } from './shared/data/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
+import { ImageComponent } from './image/image.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     VideosComponent,
     PhotosComponent,
     LoaderComponent,
-    LightboxComponent
+    LightboxComponent,
+    ImageComponent
   ],
   imports: [
     RouterModule.forRoot(
