@@ -1,8 +1,9 @@
 <ul>
-    <li *ngFor="let photo of photos">
-        <a (click)="clickHandler(photo.media$group.media$thumbnail[2].url)">
-          {{photo.media$group.media$title.$t}} {{photo.media$group.media$description.$t}}
-          <app-image src="{{photo.media$group.media$content[0].url}}" alt=""></app-image>
-        </a>
+    <li *ngFor="let photo of photos" (click)="clickHandler(photo.media$group.media$thumbnail[2].url)">
+        <div>
+            <h4>{{photo.media$group.media$title.$t}}</h4>
+            <p>{{photo.media$group.media$description.$t}}</p>
+        </div>
+        <app-image src="{{photo.media$group.media$thumbnail[2].url}}" alt=""></app-image>
     </li>
 </ul>

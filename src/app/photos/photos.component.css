@@ -5,13 +5,23 @@ ul {
 }
 
 li {
+    list-style: none;
     animation: scale 1s backwards;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 app-image {
-    width: 300px;
+    transition: opacity 1s;
+}
+
+li:hover app-image {
+    opacity: .5;
 }
 
 @keyframes scale {
@@ -31,4 +41,25 @@ li:nth-last-of-type(2n+2) {
 
 li:nth-last-of-type(3n) {
     animation-delay: .6s;
+}
+
+app-image {
+    position: relative;
+    z-index: 1;
+}
+
+div {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+}
+
+li:hover div {
+    visibility: visible;
+}
+
+h4,
+p {
+    text-align: center;
+    margin: 0;
 }

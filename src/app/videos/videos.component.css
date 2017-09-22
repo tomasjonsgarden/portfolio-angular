@@ -2,12 +2,33 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 li {
+    list-style: none;
     animation: scale 1s backwards;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    height: 10rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+app-image {
+    transition: opacity 1s;
+    min-width: 140%;
+    min-height: 140%;
+}
+
+li:hover app-image {
+    opacity: .5;
 }
 
 @keyframes scale {
@@ -27,4 +48,25 @@ li:nth-last-of-type(2n+2) {
 
 li:nth-last-of-type(3n) {
     animation-delay: .6s;
+}
+
+app-image {
+    position: relative;
+    z-index: 1;
+}
+
+div {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+}
+
+li:hover div {
+    visibility: visible;
+}
+
+h4,
+p {
+    text-align: center;
+    margin: 0;
 }
