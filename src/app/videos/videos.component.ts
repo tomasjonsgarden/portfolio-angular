@@ -25,6 +25,6 @@ export class VideosComponent implements OnInit {
   }
 
   clickHandler(link) {
-    this.router.navigate([{ outlets: { 'popup': ['lightbox', encodeURI(link)] } }]);
+    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'video', encodeURI(link)] } }]);
   }
 }

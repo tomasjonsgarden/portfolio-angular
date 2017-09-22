@@ -10,8 +10,10 @@ export class LightboxComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) { }
   link;
+  type;
   ngOnInit() {
     this.route.params.subscribe(params => {
+      this.type = params['type'];
       this.link = params['link']
     });
   }

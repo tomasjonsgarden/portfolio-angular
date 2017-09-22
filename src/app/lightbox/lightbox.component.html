@@ -1,3 +1,3 @@
-<video src="{{link}}" autoplay></video>
-<img src="{{link}}" alt="">
+<video *ngIf="type === 'video'" src="{{link}}" autoplay></video>
+<img *ngIf="type === 'photo'" src="{{link}}" alt="">
 <div (click)="clickHandler()"></div>

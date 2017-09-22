@@ -13,7 +13,7 @@ export class PhotosComponent implements OnInit {
   photos: object;
 
   constructor(private dataService: DataService, private router: Router) {
-
+    
   }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class PhotosComponent implements OnInit {
   }
 
   clickHandler(link){
-    this.router.navigate([{ outlets: { 'popup': ['lightbox', encodeURI(link)] } }]);
+    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'photo', encodeURI(link)] } }]);
   }
 }
 

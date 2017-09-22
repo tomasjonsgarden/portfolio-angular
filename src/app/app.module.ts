@@ -21,11 +21,11 @@ import { LightboxComponent } from './lightbox/lightbox.component';
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'commercial', component: CommercialComponent },
-  { path: 'lightbox/:link', component: LightboxComponent, outlet: 'popup' },
   { path: 'narrative', component: NarrativeComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'lightbox/:type/:link', component: LightboxComponent, outlet: 'popup' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
