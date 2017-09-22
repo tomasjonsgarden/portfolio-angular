@@ -17,6 +17,12 @@ export class DataService {
       .set('per_page', '50')
       .set('sort', 'manual');
     return this.http.get(`https://api.vimeo.com/me/albums/${album}/videos`, { params: params }).map((response: any) => {
+      response.data.map((video) => {
+        video.files.sort(function (a, b) {
+          return b.width - a.width
+        })
+      });
+
       return response.data;
     });
   }
