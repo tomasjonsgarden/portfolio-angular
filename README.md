@@ -1,4 +1,4 @@
-# WebsiteNg
+# WebsiteNg ![alt text](https://api.travis-ci.org/tomasjonsgarden/portfolio-angular.svg?branch=mainline)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
