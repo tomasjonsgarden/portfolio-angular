@@ -6,7 +6,7 @@ ul {
 
 li {
     list-style: none;
-    animation: scale 1s backwards;
+    animation: scale .5s backwards;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     position: relative;
@@ -32,7 +32,7 @@ li:hover app-image {
 }
 
 li:nth-last-of-type(2n) {
-    animation-delay: .2s;
+    animation-delay: .1s;
 }
 
 li:nth-last-of-type(2n+2) {
@@ -40,7 +40,11 @@ li:nth-last-of-type(2n+2) {
 }
 
 li:nth-last-of-type(3n) {
-    animation-delay: .6s;
+    animation-delay: .3s;
+}
+
+li:nth-last-of-type(4n) {
+    animation-delay: .2s;
 }
 
 app-image {
