@@ -1,3 +1,3 @@
 a.active {
-    color: red;
+    color: var(--accent-color);
 }
