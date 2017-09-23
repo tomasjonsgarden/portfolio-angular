@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
 import { ImageComponent } from './image/image.component';
+import { NavComponent } from './nav/nav.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     PhotosComponent,
     LoaderComponent,
     LightboxComponent,
-    ImageComponent
+    ImageComponent,
+    NavComponent
   ],
   imports: [
     RouterModule.forRoot(

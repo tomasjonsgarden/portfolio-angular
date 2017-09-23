@@ -1,10 +1,10 @@
-<menu>
-    <button *ngFor="let video of videos; let index = index;" value="{{index}}" (click)="onChangeImage(index)" [attr.active]="video.active"></button>
-</menu>
 <section>
     <figure *ngFor="let video of videos; let index = index" [attr.active]="index === 0" [attr.active]="video.active" (click)="clickHandler(video.files[0].link_secure)">
-        <app-image src="{{video.pictures.sizes[5].link}}" alt=""></app-image>
+        <app-image src="{{video.pictures.sizes[5].link}}"></app-image>
         <h2>{{video.title}}</h2>
         <figcaption>{{video.desc}}</figcaption>
     </figure>
 </section>
+<menu>
+    <button *ngFor="let video of videos; let index = index;" value="{{index}}" (click)="onChangeImage(index)" [attr.active]="video.active"></button>
+</menu>

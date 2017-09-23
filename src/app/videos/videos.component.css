@@ -3,6 +3,8 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 li {
@@ -15,16 +17,23 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 18rem;
-    height: 10rem;
+    width: calc(100% / 3);
+    box-sizing: border-box;
     overflow: hidden;
-    margin: 1rem;
+    padding: 1rem;
+}
+
+li::before {
+    padding-bottom: 56.25%;
+    content: '';
 }
 
 app-image {
     transition: opacity 1s;
-    min-width: 140%;
-    min-height: 140%;
+    min-width: 150%;
+    min-height: 100%;
+    position: absolute;
+    z-index: 1;
 }
 
 li:hover app-image {
@@ -52,11 +61,6 @@ li:nth-last-of-type(3n) {
 
 li:nth-last-of-type(4n) {
     animation-delay: .2s;
-}
-
-app-image {
-    position: relative;
-    z-index: 1;
 }
 
 div {

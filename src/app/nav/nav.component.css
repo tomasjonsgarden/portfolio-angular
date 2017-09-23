@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0 2rem 0;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a[brand] {
+    color: var(--accent-color);
+}
+
+a.active {
+    text-decoration: underline;
+}

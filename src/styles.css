@@ -11,4 +11,6 @@ body {
     font-family: 'open_sansregular';
     color: var(--primary-color);
     background: var(--secondary-color);
+    max-width: 1024px;
+    margin: 0 auto;
 }
