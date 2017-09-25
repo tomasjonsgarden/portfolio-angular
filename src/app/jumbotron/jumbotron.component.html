@@ -1,3 +1,4 @@
+<app-loader linear *ngIf="!loaded"></app-loader>
 <section>
     <figure *ngFor="let video of videos; let index = index" [attr.active]="index === 0" [attr.active]="video.active" (click)="clickHandler(video.files[0].link_secure)">
         <h2>{{video.name}}</h2>

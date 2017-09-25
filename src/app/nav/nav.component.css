@@ -9,7 +9,7 @@
 }
 
 a {
-    color: gray;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -30,17 +30,6 @@ hr {
     border: 0;
     border-left: 1px solid var(--primary-color);
 }
-
-
-/* a:after.active {
-    text-decoration: none;
-}
-
-section[desktop] a:not(:last-of-type):after {
-    content: '|';
-    text-decoration: none;
-    margin: 0 .5rem 0 .5rem;
-} */
 
 section {
     display: flex;

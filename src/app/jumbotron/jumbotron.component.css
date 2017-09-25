@@ -61,6 +61,7 @@ button {
     outline: none;
     margin: .5rem;
     padding: 0;
+    background: var(--primary-color);
 }
 
 button[active=true] {
