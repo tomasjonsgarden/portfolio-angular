@@ -25,6 +25,7 @@ menu {
 app-image {
     min-width: 140%;
     min-height: 100%;
+    transition: 1s opacity;
 }
 
 figure {
@@ -34,6 +35,22 @@ figure {
     justify-content: center;
     height: 100%;
     margin: 0;
+}
+
+h2,
+figcaption {
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+}
+
+figure:hover h2,
+figure:hover figcaption {
+    visibility: visible;
+}
+
+figure:hover app-image {
+    opacity: .5;
 }
 
 button {
@@ -53,11 +70,6 @@ button[active=true] {
 figure:not([active=true]) {
     display: none;
 }
-
-
-/* figure[active=false] {
-    animation: to 1s forwards;
-} */
 
 figure[active=true] {
     animation: from 1s backwards;

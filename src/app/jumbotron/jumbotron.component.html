@@ -1,8 +1,8 @@
 <section>
     <figure *ngFor="let video of videos; let index = index" [attr.active]="index === 0" [attr.active]="video.active" (click)="clickHandler(video.files[0].link_secure)">
-        <app-image src="{{video.pictures.sizes[5].link}}"></app-image>
         <h2>{{video.name}}</h2>
         <figcaption>{{video.description}}</figcaption>
+        <app-image src="{{video.pictures.sizes[5].link}}"></app-image>
     </figure>
 </section>
 <menu>
