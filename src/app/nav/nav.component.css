@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 3rem 1rem;
     font-family: 'open_sanslight';
     text-transform: uppercase;
 }
@@ -21,7 +21,7 @@ a[brand] {
     flex-shrink: 0;
 }
 
-a.active {
+a.active:not([brand]) {
     text-decoration: underline;
 }
 
