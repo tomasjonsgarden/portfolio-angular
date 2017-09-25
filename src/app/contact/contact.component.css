@@ -14,3 +14,15 @@ div {
 a {
     color: var(--primary-color);
 }
+
+@media (max-width: 1024px) {
+    div {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    div {
+        flex-basis: 100%;
+    }
+}
