@@ -17,5 +17,6 @@ body {
 
 hr {
     border: none;
+    margin: .5rem;
     border-top: 1px solid var(--primary-color);
 }

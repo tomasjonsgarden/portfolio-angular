@@ -1,8 +1,8 @@
 :host {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 2rem);
-    padding: 1rem;
+    width: calc(100% - 1rem);
+    padding: .5rem;
     overflow: hidden;
     display: flex;
     align-items: center;
