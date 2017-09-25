@@ -1,6 +1,7 @@
 :host {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem 0 2rem 0;
 }
@@ -12,8 +13,53 @@ a {
 
 a[brand] {
     color: var(--accent-color);
+    /* width: 4rem; */
+    display: flex;
+    flex-basis: calc(100% - 4rem);
+    flex-shrink: 0;
 }
 
 a.active {
     text-decoration: underline;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+section[mobile]:not(.active) {
+    display: none;
+}
+
+section[mobile] {
+    display: flex;
+    flex-direction: column;
+}
+
+section[mobile] div {
+    display: flex;
+    flex-direction: column;
+}
+
+section[desktop] {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    a[brand] {
+        color: var(--accent-color);
+        flex-basis: initial;
+    }
+    section[desktop] {
+        display: flex;
+    }
+    section[mobile] {
+        display: none;
+    }
+    span {
+        display: none;
+    }
 }

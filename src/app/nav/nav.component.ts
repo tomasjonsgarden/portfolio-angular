@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  menuOpen = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  menuChanged(){
+    this.menuOpen=!this.menuOpen;
   }
 
 }
