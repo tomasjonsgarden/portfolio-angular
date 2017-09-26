@@ -21,7 +21,7 @@ app-image {
 }
 
 li:hover app-image {
-    opacity: .5;
+    opacity: var(--dim-opacity);
 }
 
 @keyframes scale {

@@ -26,6 +26,7 @@ app-image {
     min-width: 140%;
     min-height: 100%;
     transition: 1s opacity;
+    transform: translate3d(0, 0, 0);
 }
 
 figure {
@@ -35,6 +36,7 @@ figure {
     justify-content: center;
     height: 100%;
     margin: 0;
+    transform: translate3d(0, 0, 0);
 }
 
 div {
@@ -49,7 +51,7 @@ figure:hover div {
 }
 
 figure:hover app-image {
-    opacity: .5;
+    opacity: var(--dim-opacity);
 }
 
 button {
@@ -63,6 +65,10 @@ button {
     background: var(--primary-color);
 }
 
+app-image {
+    transform: translate3d(0, 0, 0);
+}
+
 button[active=true] {
     background: white;
 }
@@ -73,6 +79,11 @@ figure:not([active=true]) {
 
 figure[active=true] {
     animation: from 1s backwards;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
 }
 
 @keyframes from {

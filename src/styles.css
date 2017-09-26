@@ -4,9 +4,11 @@
 :root {
     --accent-color: red;
     --primary-color: #5A5A5A;
-    --secondary-color: black;
+    --secondary-color: white;
+    --background-color: black;
     --padding-desktop: 1rem;
     --padding-mobile: .5rem;
+    --dim-opacity: .2;
 }
 
 @media (max-width: 1024px) {
@@ -16,9 +18,9 @@
 }
 
 body {
-    font-family: 'open_sansregular';
+    font-family: 'open_sanslight';
     color: var(--primary-color);
-    background: var(--secondary-color);
+    background: var(--background-color);
     max-width: 1280px;
     margin: 0 auto;
 }

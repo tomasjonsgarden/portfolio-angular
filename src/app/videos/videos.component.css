@@ -38,7 +38,7 @@ app-image {
 }
 
 li:hover app-image {
-    opacity: .5;
+    opacity: var(--dim-opacity);
 }
 
 @keyframes scale {
@@ -72,6 +72,10 @@ div {
 
 li:hover div {
     visibility: visible;
+}
+
+h4 {
+    color: var(--secondary-color);
 }
 
 h4,
