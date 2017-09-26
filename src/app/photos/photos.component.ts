@@ -10,16 +10,23 @@ import { Router } from '@angular/router';
 export class PhotosComponent implements OnInit {
 
   loaded: boolean;
-  photos: object;
+  portraitPhotos: object;
+  landscapePhotos: object;
+  landscapeLoaded;
+  portraitLoaded;
 
   constructor(private dataService: DataService, private router: Router) {
     
   }
 
   ngOnInit() {
-    this.dataService.getPhotos().subscribe((photos) => {
-      this.photos = photos;
-      this.loaded = true;
+    this.dataService.getPortraitPhotos().subscribe((portraitPhotos) => {
+      this.portraitPhotos = portraitPhotos;
+      this.portraitLoaded = true;
+    })
+    this.dataService.getLandscapePhotos().subscribe((landscapePhotos) => {
+      this.landscapePhotos = landscapePhotos;
+      this.landscapeLoaded = true;
     })
   }
 

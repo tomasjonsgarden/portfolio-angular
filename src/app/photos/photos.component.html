@@ -1,5 +1,16 @@
-<ul>
-    <li *ngFor="let photo of photos" (click)="clickHandler(photo.media$group.media$thumbnail[2].url)">
+<ul landscape>
+    <app-loader linear *ngIf="!landscapeLoaded"></app-loader>
+    <li *ngFor="let photo of landscapePhotos" (click)="clickHandler(photo.media$group.media$thumbnail[2].url)">
+        <div>
+            <h4>{{photo.media$group.media$title.$t}}</h4>
+            <p>{{photo.media$group.media$description.$t}}</p>
+        </div>
+        <app-image src="{{photo.media$group.media$thumbnail[2].url}}" alt=""></app-image>
+    </li>
+</ul>
+<ul portrait>
+    <app-loader linear *ngIf="!portraitLoaded"></app-loader>
+    <li *ngFor="let photo of portraitPhotos" (click)="clickHandler(photo.media$group.media$thumbnail[2].url)">
         <div>
             <h4>{{photo.media$group.media$title.$t}}</h4>
             <p>{{photo.media$group.media$description.$t}}</p>

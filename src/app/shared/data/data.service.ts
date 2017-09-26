@@ -36,4 +36,26 @@ export class DataService {
     });
   }
 
+  getLandscapePhotos() {
+    let params = new HttpParams()
+      .set('alt', 'json')
+      .set('kind', 'photo')
+    return this.http.get(`https://picasaweb.google.com/data/feed/base/user/115234932010059601425/albumid/6218961437089181137`, { params: params }).map((response: any) => {
+      return response.feed.entry.filter((entry)=>{
+        return entry.media$group.media$content[0].width > entry.media$group.media$content[0].height;
+      });
+    });
+  }
+
+  getPortraitPhotos() {
+    let params = new HttpParams()
+      .set('alt', 'json')
+      .set('kind', 'photo')
+    return this.http.get(`https://picasaweb.google.com/data/feed/base/user/115234932010059601425/albumid/6218961437089181137`, { params: params }).map((response: any) => {
+      return response.feed.entry.filter((entry)=>{
+        return entry.media$group.media$content[0].width < entry.media$group.media$content[0].height;
+      });
+    });
+  }
+
 }
