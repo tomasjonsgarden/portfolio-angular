@@ -79,3 +79,9 @@ p {
     text-align: center;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    li {
+        width: calc((100% - var(--padding-desktop)*4) / 2);
+    }
+}
