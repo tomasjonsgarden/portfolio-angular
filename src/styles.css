@@ -9,6 +9,12 @@
     --padding-mobile: .5rem;
 }
 
+@media (max-width: 1024px) {
+     :root {
+        --padding-desktop: .5rem;
+    }
+}
+
 body {
     font-family: 'open_sansregular';
     color: var(--primary-color);

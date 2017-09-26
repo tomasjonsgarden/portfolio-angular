@@ -59,7 +59,7 @@ button {
     height: var(--padding-desktop);
     border-radius: 50%;
     outline: none;
-    margin: var(--padding-desktop) .5rem var(--padding-desktop) .5rem;
+    margin: calc(var(--padding-desktop) / 2);
     padding: 0;
     background: var(--primary-color);
 }
