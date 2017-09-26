@@ -44,8 +44,7 @@ div {
     visibility: hidden;
 }
 
-figure:hover h2,
-figure:hover figcaption {
+figure:hover div {
     visibility: visible;
 }
 
