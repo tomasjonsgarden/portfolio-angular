@@ -1,6 +1,6 @@
 :host {
     display: block;
-    padding: 0 .5rem 0 .5rem;
+    padding: 0 var(--padding-desktop) 0 var(--padding-desktop);
 }
 
 a.active {

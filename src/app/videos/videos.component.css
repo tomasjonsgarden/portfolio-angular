@@ -17,10 +17,10 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: calc((100% - 3rem) / 3);
+    width: calc((100% - var(--padding-desktop)*6) / 3);
     box-sizing: border-box;
     overflow: hidden;
-    margin: .5rem;
+    margin: var(--padding-desktop);
 }
 
 li::before {

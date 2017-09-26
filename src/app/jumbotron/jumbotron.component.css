@@ -1,8 +1,8 @@
 :host {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 1rem);
-    padding: .5rem;
+    width: calc(100% - var(--padding-desktop)*2);
+    padding: var(--padding-desktop);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -37,8 +37,8 @@ figure {
     margin: 0;
 }
 
-h2,
-figcaption {
+div {
+    text-align: center;
     position: absolute;
     z-index: 2;
     visibility: hidden;
@@ -55,11 +55,11 @@ figure:hover app-image {
 
 button {
     border: none;
-    width: 10px;
-    height: 10px;
+    width: var(--padding-desktop);
+    height: var(--padding-desktop);
     border-radius: 50%;
     outline: none;
-    margin: .5rem;
+    margin: var(--padding-desktop) .5rem var(--padding-desktop) .5rem;
     padding: 0;
     background: var(--primary-color);
 }

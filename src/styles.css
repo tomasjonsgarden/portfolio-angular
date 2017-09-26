@@ -5,6 +5,8 @@
     --accent-color: red;
     --primary-color: #5A5A5A;
     --secondary-color: black;
+    --padding-desktop: 1rem;
+    --padding-mobile: .5rem;
 }
 
 body {
@@ -17,6 +19,6 @@ body {
 
 hr {
     border: none;
-    margin: .5rem;
+    margin: var(--padding-desktop);
     border-top: 1px solid var(--primary-color);
 }
