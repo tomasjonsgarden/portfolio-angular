@@ -13,8 +13,12 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
 
-  menuChanged(){
-    this.menuOpen=!this.menuOpen;
+  menuChanged() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  menuClose() {
+    this.menuOpen = false;
   }
 
 }
