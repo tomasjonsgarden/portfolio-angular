@@ -46,6 +46,7 @@ section[mobile]:not(.active) {
 section[mobile] {
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
 }
 
 section[mobile] div {
