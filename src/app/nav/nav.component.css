@@ -17,7 +17,7 @@ a[brand] {
     color: var(--accent-color);
     /* width: 4rem; */
     display: flex;
-    flex-basis: calc(100% - 4rem);
+    /* flex-basis: calc(100% - 4rem); */
     flex-shrink: 0;
     margin-right: calc(var(--padding-desktop) * 2);
 }
@@ -44,6 +44,7 @@ section[mobile]:not(.active) {
 }
 
 section[mobile] {
+    flex-basis: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
