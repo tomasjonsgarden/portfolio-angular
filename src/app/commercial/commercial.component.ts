@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../shared/data/data.service';
+
 @Component({
   selector: 'app-commercial',
   templateUrl: './commercial.component.html',
@@ -7,11 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommercialComponent implements OnInit {
 
-  figures;
+  loaded = false;
+  videos: any;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getNarrativeVideos().subscribe((videos)=>{
+      this.videos = videos;
+      this.loaded = true;
+    });
   }
 
 }

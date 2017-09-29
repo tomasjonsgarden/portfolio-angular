@@ -1,4 +1,3 @@
-<app-loader linear *ngIf="!loaded"></app-loader>
 <ul>
     <li *ngFor="let video of videos" (click)="clickHandler(video.files[0].link_secure)">
         <div>

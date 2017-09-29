@@ -11,17 +11,14 @@ export class VideosComponent implements OnInit {
 
   @Input() album;
   loaded: boolean;
-  videos: object;
+  @Input() videos;
 
-  constructor(private dataService: DataService, private router : Router) {
+  constructor(private router : Router) {
 
   }
 
   ngOnInit() {
-    this.dataService.getVideos(this.album).subscribe((videos) => {
-      this.videos = videos;
-      this.loaded = true;
-    })
+    
   }
 
   clickHandler(link) {

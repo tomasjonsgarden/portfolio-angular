@@ -1,7 +1,8 @@
 <app-jumbotron album="3674768"></app-jumbotron>
 <!-- <app-videos album="3674768"></app-videos> -->
 <hr>
-<app-videos album="2334700"></app-videos>
+<app-loader linear *ngIf="!featuredVideosLoaded"></app-loader>
+<app-videos [videos]="featuredVideos"></app-videos>
 <hr>
 <app-about></app-about>
 <hr>
