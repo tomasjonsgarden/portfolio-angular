@@ -20,11 +20,11 @@ export class PhotosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.getPortraitPhotos().subscribe((portraitPhotos) => {
+    this.dataService.getPhotos('portrait').subscribe((portraitPhotos) => {
       this.portraitPhotos = portraitPhotos;
       this.portraitLoaded = true;
     })
-    this.dataService.getLandscapePhotos().subscribe((landscapePhotos) => {
+    this.dataService.getPhotos('landscape').subscribe((landscapePhotos) => {
       this.landscapePhotos = landscapePhotos;
       this.landscapeLoaded = true;
     })
