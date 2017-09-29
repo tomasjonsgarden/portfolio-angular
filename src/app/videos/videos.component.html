@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let video of videos" (click)="clickHandler(video.files[0].link_secure)">
+    <li *ngFor="let video of videos; let index = index" (click)="clickHandler(videos, index)">
         <div>
             <h4>{{video.name}}</h4>
             <p>{{video.description}}</p>

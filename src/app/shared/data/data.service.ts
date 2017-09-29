@@ -13,6 +13,8 @@ export class DataService {
     '2334700': [],
     '3674768': [],
   };
+  activeVideos;
+  activeVideoIndex;
   videoParams = new HttpParams()
     .set('access_token', '5329144dd1b697d05bbf580d3b10c6d3')
     .set('per_page', '50')
@@ -22,6 +24,14 @@ export class DataService {
     .set('kind', 'photo')
 
   constructor(private http: HttpClient) { }
+
+  goNextVideo() {
+    this.activeVideoIndex = this.activeVideoIndex + 1;
+  }
+
+  goPrevVideo() {
+    this.activeVideoIndex = this.activeVideoIndex - 1;
+  }
 
   getVideos(album) {
     if (!this.videos[album].length) {

@@ -13,7 +13,7 @@ export class VideosComponent implements OnInit {
   loaded: boolean;
   @Input() videos;
 
-  constructor(private router : Router) {
+  constructor(private dataService: DataService, private router : Router) {
 
   }
 
@@ -21,7 +21,9 @@ export class VideosComponent implements OnInit {
     
   }
 
-  clickHandler(link) {
-    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'video', encodeURI(link)] } }]);
+  clickHandler(videos, index) {
+    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'video', index] } }]);
+    this.dataService.activeVideoIndex = index;
+    this.dataService.activeVideos = videos;
   }
 }
