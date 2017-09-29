@@ -70,7 +70,6 @@ export class DataService {
         } else {
           observer.next(this.photos);
         }
-
       });
     }
   }
