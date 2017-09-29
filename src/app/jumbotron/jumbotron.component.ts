@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DataService } from '../shared/data/data.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,17 +8,11 @@ import { Router } from '@angular/router';
 })
 export class JumbotronComponent implements OnInit {
 
-  @Input() album;
-  videos;
-  loaded;
-  constructor(private dataService: DataService, private router: Router) { }
+  @Input() videos;
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.dataService.getVideos(this.album).subscribe((videos) => {
-      videos[0]['active'] = true;
-      this.videos = videos;
-      this.loaded = true;
-    })
+    
   }
   onChangeImage(index) {
     console.log(index)
