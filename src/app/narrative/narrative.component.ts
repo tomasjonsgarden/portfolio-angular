@@ -15,10 +15,11 @@ export class NarrativeComponent implements OnInit {
   constructor(private dataService: DataService) { }
   
   ngOnInit() {
-    this.dataService.getCommercialVideos().subscribe((videos)=>{
+    this.dataService.getVideos('2329080').subscribe((videos)=>{
       this.videos = videos;
       this.loaded = true;
     });
   }
 
 }
+

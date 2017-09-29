@@ -15,7 +15,7 @@ export class CommercialComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getNarrativeVideos().subscribe((videos)=>{
+    this.dataService.getVideos('2329074').subscribe((videos)=>{
       this.videos = videos;
       this.loaded = true;
     });
