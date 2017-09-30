@@ -26,16 +26,14 @@ export class LightboxComponent implements OnInit {
     });
   }
 
-  prevHandler(event) {
-    event.stopPropagation();
+  prevHandler() {
     if (0 <= this.dataService.activeVideoIndex - 1 && this.dataService.activeVideoIndex - 1 < this.dataService.activeVideos.length) {
       this.dataService.goPrevVideo();
       this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
     }
   }
 
-  nextHandler(event) {
-    event.stopPropagation();
+  nextHandler() {
     if (0 <= this.dataService.activeVideoIndex + 1 && this.dataService.activeVideoIndex + 1 < this.dataService.activeVideos.length) {
       this.dataService.goNextVideo();
       this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
