@@ -20,4 +20,4 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run ng build -- --target=production --aot=false --verbose
-      - run: npm run firebase deploy --project "tomas-jonsgarden" --token "$FIREBASE_TOKEN" --only "hosting" --debug
+      - run: npm run firebase deploy -- --project "tomas-jonsgarden" --token "$FIREBASE_TOKEN" --only "hosting" --debug
