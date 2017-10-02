@@ -1,12 +1,9 @@
-<img *ngIf="type === 'photo'" src="{{link.replace('s288', 's1920')}}" alt="">
-
-
 <div>
-    <button class="prev" (click)="prevHandler($event)" [disabled]="prevDisabled"><</button>
-    <button class="close" (click)="clickHandler()">X</button>
-    <button class="next" (click)="nextHandler($event)" [disabled]="nextDisabled">></button>
-    <video *ngIf="type === 'video'" (timeupdate)="timeupdateHandler($event)" (click)="videoClickHandler($event)" src="{{link}}" autoplay (canplaythrough)="canplaythroughHandler()" (loadstart)="loadstartHandler()">
-            </video>
+    <button class="prev icon-prev" (click)="prevHandler($event)" [disabled]="prevDisabled"></button>
+    <button class="close icon-close" (click)="clickHandler()"></button>
+    <button class="next icon-next" (click)="nextHandler($event)" [disabled]="nextDisabled"></button>
+    <img *ngIf="type === 'photo'" src="{{link.replace('s288', 's1920')}}" alt="">
+    <video *ngIf="type === 'video'" (timeupdate)="timeupdateHandler($event)" (click)="videoClickHandler($event)" src="{{link}}" autoplay (canplaythrough)="canplaythroughHandler()" (loadstart)="loadstartHandler()"></video>
     <meter value="{{currentTime/duration*100}}" min="0" max="100" (click)="meterClickHandler($event)"></meter>
     <app-loader linear *ngIf="!loaded"></app-loader>
 </div>

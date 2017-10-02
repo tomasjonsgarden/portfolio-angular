@@ -26,11 +26,15 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   goNextVideo() {
-    this.activeVideoIndex = this.activeVideoIndex + 1;
+    if (0 <= this.activeVideoIndex + 1 && this.activeVideoIndex + 1 < this.activeVideos.length) {
+      this.activeVideoIndex = this.activeVideoIndex + 1;
+    }
   }
 
   goPrevVideo() {
-    this.activeVideoIndex = this.activeVideoIndex - 1;
+    if (0 <= this.activeVideoIndex - 1 && this.activeVideoIndex - 1 < this.activeVideos.length) {
+      this.activeVideoIndex = this.activeVideoIndex - 1;
+    }
   }
 
   getVideos(album) {

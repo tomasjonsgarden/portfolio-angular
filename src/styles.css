@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "/assets/fonts/stylesheet.css";
+@import "/assets/icons/stylesheet.css";
 :root {
     --accent-color: red;
     --primary-color: #5A5A5A;

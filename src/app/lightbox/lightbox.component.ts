@@ -27,17 +27,13 @@ export class LightboxComponent implements OnInit {
   }
 
   prevHandler() {
-    if (0 <= this.dataService.activeVideoIndex - 1 && this.dataService.activeVideoIndex - 1 < this.dataService.activeVideos.length) {
-      this.dataService.goPrevVideo();
-      this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
-    }
+    this.dataService.goPrevVideo();
+    this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
   }
 
   nextHandler() {
-    if (0 <= this.dataService.activeVideoIndex + 1 && this.dataService.activeVideoIndex + 1 < this.dataService.activeVideos.length) {
-      this.dataService.goNextVideo();
-      this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
-    }
+    this.dataService.goNextVideo();
+    this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
   }
 
   clickHandler() {
@@ -52,21 +48,21 @@ export class LightboxComponent implements OnInit {
     this.loaded = false;
   }
 
-  timeupdateHandler(event){
+  timeupdateHandler(event) {
     this.video = event.target;
     this.duration = event.target.duration;
     this.currentTime = event.target.currentTime;
   }
 
-  videoClickHandler(event){
+  videoClickHandler(event) {
     event.stopPropagation();
-    if(event.target.paused){
+    if (event.target.paused) {
       event.target.play();
-    }else {
+    } else {
       event.target.pause();
     }
   }
-  meterClickHandler(event){
+  meterClickHandler(event) {
     event.stopPropagation();
     this.video.currentTime = event.offsetX / event.target.offsetWidth * this.duration;
   }
