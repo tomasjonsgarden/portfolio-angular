@@ -7,11 +7,9 @@ before_install:
   - echo "before_install"
 install:
   - npm install
-  - npm install --global firebase-tools
-  - npm install --global @angular/cli
 before_script:
   - echo 'before_script'
 script:
-  - ng build --target=production --verbose
+  - npm run ng build -- --target=production --aot=false --verbose
 after_success:
-  - firebase deploy --project "tomas-jonsgarden" --token "$FIREBASE_TOKEN" --only "hosting" --debug
+  - npm run firebase deploy --project "tomas-jonsgarden" --token "$FIREBASE_TOKEN" --only "hosting" --debug
