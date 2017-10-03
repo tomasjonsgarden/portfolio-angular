@@ -15,7 +15,8 @@
         <a routerLink="#" routerLinkActive="active">Instagram</a>
     </div>
 </section>
-<span (click)="menuChanged()" class="icon-menu"></span>
+<span *ngIf="!menuOpen" (click)="menuChanged()" class="icon icon-menu"></span>
+<span *ngIf="menuOpen" (click)="menuClose()" class="icon icon-close"></span>
 <section mobile [class.active]="menuOpen" (click)="menuClose()">
     <div>
         <a routerLink="/commercial" routerLinkActive="active">Commercial</a>
