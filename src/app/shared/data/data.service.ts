@@ -8,9 +8,10 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class DataService {
 
+
   photos = [];
   type;
-  lightbox:Subject<any> = new Subject();
+  lightbox: Subject<{ lightbox: boolean, type: string }> = new Subject();
   videos = {
     '2329080': [],
     '2329074': [],

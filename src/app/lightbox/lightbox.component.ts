@@ -55,7 +55,7 @@ export class LightboxComponent implements OnInit {
   }
 
   clickHandler() {
-    this.dataService.lightbox.next(false);
+    this.dataService.lightbox.next({lightbox: false, type: 'video'});
   }
 
   canplaythroughHandler() {
