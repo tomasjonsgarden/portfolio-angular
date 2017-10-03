@@ -27,7 +27,6 @@ const appRoutes: Routes = [
   { path: 'photography', component: PhotographyComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'lightbox/:type/:index', component: LightboxComponent, outlet: 'popup' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

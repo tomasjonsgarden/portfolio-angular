@@ -1,6 +1,6 @@
 <ul landscape>
     <app-loader linear *ngIf="!landscapeLoaded"></app-loader>
-    <li *ngFor="let photo of landscapePhotos" (click)="clickHandler(photo.media$group.media$thumbnail[2].url)">
+    <li *ngFor="let photo of landscapePhotos; let index = index" (click)="clickHandler(landscapePhotos, index)">
         <div>
             <h4>{{photo.media$group.media$title.$t}}</h4>
             <p>{{photo.media$group.media$description.$t}}</p>

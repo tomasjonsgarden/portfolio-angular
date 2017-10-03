@@ -1,5 +1,5 @@
 <section>
-    <figure *ngFor="let video of videos; let index = index" [attr.active]="index === 0" [attr.active]="video.active" (click)="clickHandler(video.files[0].link_secure)">
+    <figure *ngFor="let video of videos; let index = index" [attr.active]="index === 0" [attr.active]="video.active" (click)="clickHandler(videos, index)">
         <div>
             <h2>{{video.name}}</h2>
             <figcaption>{{video.description}}</figcaption>

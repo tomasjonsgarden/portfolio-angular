@@ -30,8 +30,12 @@ export class PhotosComponent implements OnInit {
     })
   }
 
-  clickHandler(link){
-    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'photo', encodeURI(link)] } }]);
+
+  clickHandler(photos, index){
+    // photo.media$group.media$thumbnail[2].url
+    this.dataService.lightbox.next({lightbox: true, type: 'photo'});
+    this.dataService.activePhotoIndex = index;
+    this.dataService.activePhotos = photos;
   }
 }
 

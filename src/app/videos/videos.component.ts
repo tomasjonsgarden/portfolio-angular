@@ -22,7 +22,7 @@ export class VideosComponent implements OnInit {
   }
 
   clickHandler(videos, index) {
-    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'video', index] } }]);
+    this.dataService.lightbox.next({lightbox: true, type: 'video'});
     this.dataService.activeVideoIndex = index;
     this.dataService.activeVideos = videos;
   }

@@ -15,17 +15,23 @@ export class LightboxComponent implements OnInit {
   nextDisabled = false;
   prevDisabled = false;
   loaded = false;
-  type;
-  currentTime;
-  duration;
+  type = 'video';
+  currentTime: number = 0;
+  duration: number = 1;
   video;
   ngOnInit() {
-    this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
-    this.route.params.subscribe(params => {
-      this.type = params['type'];
-    });
+    this.type = this.dataService.type;
+    if (this.dataService.type === 'video') {
+      this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
+    } else {
+      this.link = this.dataService.activePhotos[this.dataService.activePhotoIndex].media$group.media$thumbnail[2].url;
+    }
   }
 
+  getCurrentTime() {
+    let value = this.currentTime / this.duration * 100 + '';
+    return value === 'NaN' ? 0 : value;
+  }
   prevHandler() {
     this.dataService.goPrevVideo();
     this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
@@ -37,10 +43,14 @@ export class LightboxComponent implements OnInit {
   }
 
   clickHandler() {
-    this.router.navigate([{ outlets: { 'popup': null } }]);
+    this.dataService.lightbox.next(false);
   }
 
   canplaythroughHandler() {
+    this.loaded = true;
+  }
+  
+  loadHandler() {
     this.loaded = true;
   }
 

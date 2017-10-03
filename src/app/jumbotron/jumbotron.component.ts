@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { DataService } from '../shared/data/data.service';
+
 @Component({
   selector: 'app-jumbotron',
   templateUrl: './jumbotron.component.html',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 export class JumbotronComponent implements OnInit {
 
   @Input() videos;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
     
@@ -22,7 +24,9 @@ export class JumbotronComponent implements OnInit {
     this.videos[index]['active'] = true;
   }
 
-  clickHandler(link) {
-    this.router.navigate([{ outlets: { 'popup': ['lightbox', 'video', encodeURI(link)] } }]);
+  clickHandler(videos, index) {
+    this.dataService.lightbox.next({lightbox: true, type: 'video'});
+    this.dataService.activeVideoIndex = index;
+    this.dataService.activeVideos = videos;
   }
 }

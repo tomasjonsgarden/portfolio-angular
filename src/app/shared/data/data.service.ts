@@ -2,11 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import 'rxjs/Rx'
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+
 
 @Injectable()
 export class DataService {
 
-  photos = []
+  photos = [];
+  type;
+  lightbox:Subject<any> = new Subject();
   videos = {
     '2329080': [],
     '2329074': [],
@@ -14,6 +18,8 @@ export class DataService {
     '3674768': [],
   };
   activeVideos;
+  activePhotos;
+  activePhotoIndex;
   activeVideoIndex;
   videoParams = new HttpParams()
     .set('access_token', '5329144dd1b697d05bbf580d3b10c6d3')
