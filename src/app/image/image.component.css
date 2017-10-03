@@ -18,3 +18,8 @@ img {
     width: 100%;
     z-index: 2;
 }
+
+app-loader {
+    width: 4rem;
+    height: 4rem;
+}

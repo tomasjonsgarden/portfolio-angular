@@ -4,7 +4,7 @@
             <h2>{{video.name}}</h2>
             <figcaption>{{video.description}}</figcaption>
         </div>
-        <app-image src="{{video.pictures.sizes[5].link}}"></app-image>
+        <app-image src="{{video.pictures.sizes[5].link.replace('1280x720', '1920x1080')}}"></app-image>
     </figure>
 </section>
 <menu>
