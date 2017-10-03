@@ -33,13 +33,25 @@ export class LightboxComponent implements OnInit {
     return value === 'NaN' ? 0 : value;
   }
   prevHandler() {
-    this.dataService.goPrevVideo();
-    this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
+    this.type = this.dataService.type;
+    if (this.dataService.type === 'video') {
+      this.dataService.goPrevVideo();
+      this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
+    } else {
+      this.dataService.goPrevPhoto();
+      this.link = this.dataService.activePhotos[this.dataService.activePhotoIndex].media$group.media$thumbnail[2].url;
+    }
   }
 
   nextHandler() {
-    this.dataService.goNextVideo();
-    this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
+    this.type = this.dataService.type;
+    if (this.dataService.type === 'video') {
+      this.dataService.goNextVideo();
+      this.link = this.dataService.activeVideos[this.dataService.activeVideoIndex].files[0].link_secure;
+    } else {
+      this.dataService.goNextPhoto();
+      this.link = this.dataService.activePhotos[this.dataService.activePhotoIndex].media$group.media$thumbnail[2].url;
+    }
   }
 
   clickHandler() {
@@ -49,7 +61,7 @@ export class LightboxComponent implements OnInit {
   canplaythroughHandler() {
     this.loaded = true;
   }
-  
+
   loadHandler() {
     this.loaded = true;
   }

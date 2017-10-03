@@ -36,10 +36,21 @@ export class DataService {
       this.activeVideoIndex = this.activeVideoIndex + 1;
     }
   }
+  goNextPhoto() {
+    if (0 <= this.activePhotoIndex + 1 && this.activePhotoIndex + 1 < this.activePhotos.length) {
+      this.activePhotoIndex = this.activePhotoIndex + 1;
+    }
+  }
 
   goPrevVideo() {
     if (0 <= this.activeVideoIndex - 1 && this.activeVideoIndex - 1 < this.activeVideos.length) {
       this.activeVideoIndex = this.activeVideoIndex - 1;
+    }
+  }
+
+  goPrevPhoto() {
+    if (0 <= this.activePhotoIndex - 1 && this.activePhotoIndex - 1 < this.activePhotos.length) {
+      this.activePhotoIndex = this.activePhotoIndex - 1;
     }
   }
 
