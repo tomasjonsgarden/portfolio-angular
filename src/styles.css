@@ -32,7 +32,7 @@ hr {
     border-top: 1px solid var(--primary-color);
 }
 
-@keyframes scale {
+@keyframes appear {
     from {
         /* transform: translateY(50%); */
         transform: scale(.8);

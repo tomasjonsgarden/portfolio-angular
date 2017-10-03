@@ -8,7 +8,7 @@ ul {
 
 li {
     list-style: none;
-    animation: scale .5s backwards;
+    animation: appear .5s backwards;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     position: relative;

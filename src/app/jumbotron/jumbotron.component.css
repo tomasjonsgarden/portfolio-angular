@@ -78,7 +78,7 @@ figure:not([active=true]) {
 }
 
 figure[active=true] {
-    animation: scale 1s backwards;
+    animation: appear 1s backwards;
 }
 
 h2 {
