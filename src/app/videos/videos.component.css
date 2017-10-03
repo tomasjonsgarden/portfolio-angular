@@ -41,13 +41,6 @@ li:hover app-image {
     opacity: var(--dim-opacity);
 }
 
-@keyframes scale {
-    from {
-        transform: scale(.8);
-        opacity: 0;
-    }
-}
-
 li:nth-last-of-type(2n) {
     animation-delay: .1s;
 }
